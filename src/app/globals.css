@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+/* - Definindo os breakpoints do tailwind - */
+
+@theme {
+  --breakpoint-md: 1024px;
+  --breakpoint-lg: 1440px;
+  --breakpoint-xl: 1920px;
+}
+
+@custom-variant sm {
+  @media screen (min-width: 640px) AND (max-width: 1023px) AND (orientation: landscape);
+}

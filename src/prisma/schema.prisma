@@ -1,0 +1,86 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum QuestionCategory {
+  jogos
+  filmes
+  musicas
+}
+
+enum QuestionType {
+  // * Um único enum separado no momento de validar com o ZOD *
+
+  // 1. Jogos
+
+  aboutGameName
+  aboutGameReleaseYear
+  aboutGameAverageRating
+  aboutGameAvailablePlatforms
+
+  // 2. Filmes
+
+  aboutMovieName
+  aboutMovieReleaseYear
+  aboutMovieRating
+  aboutMovieDirectorName
+
+  // 3. Musicas
+
+  aboutArtistName
+  aboutAlbumTitle
+  aboutMusicTitle
+  aboutArtistsTopMusic
+}
+
+enum ReasonWhyGameEnded {
+  wrongAnswer
+  timesUp
+  leftGame
+}
+
+enum SessionStatus {
+  active
+  finished
+}
+
+enum TokenStatus {
+  active
+  used
+}
+
+model Question {
+  questionId       String           @id @default(uuid())
+  questionCategory QuestionCategory
+  questionType     QuestionType
+  title            String
+  imageUrl         String?
+  possibleAnswers  String[]
+  selectedAnswer   String?
+  rightAnswer      String
+  sessionId        String
+  session          QuizSession      @relation(fields: [sessionId], references: [sessionId])
+}
+
+model QuizSession {
+  sessionId          String              @id @default(uuid())
+  questions          Question[]
+  score              Int                 @default(0)
+  reasonWhyGameEnded ReasonWhyGameEnded?
+  sessionStatus      SessionStatus       @default(active)
+}
+
+model Token {
+  startToken  String      @id @default(uuid())
+  tokenStatus TokenStatus @default(active)
+}
