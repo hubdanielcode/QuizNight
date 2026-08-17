@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
+import { finishSession } from "@/actions/quiz";
 
 /* - Sempre que a página for carregada por um reload (F5, Ctrl+R, botão de recarregar do navegador etc), manda o usuário de volta pra home, não importa em qual página ele estava. Navegação normal (clique em link, router.push) não é afetada aqui - */
 
@@ -27,10 +28,11 @@ const BlockBrowserNavigation = () => {
 
     window.history.pushState(null, "", window.location.href);
 
-    const handlePopState = () => {
-      /* - Reempilha a entrada pra manter a armadilha ativa em tentativas seguintes, e manda o usuário de volta pra home - */
+    const handlePopState = async () => {
+      /* - Reempilha a entrada pra manter a armadilha ativa em tentativas seguintes, encerra a sessão no banco e manda o usuário de volta pra home - */
 
       window.history.pushState(null, "", window.location.href);
+      await finishSession("leftGame");
       window.location.href = "/";
     };
 
