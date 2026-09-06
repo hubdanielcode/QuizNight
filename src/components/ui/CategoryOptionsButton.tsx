@@ -16,7 +16,7 @@ const CategoryOptionButton = ({ category }: { category: CategoriesProps }) => {
         router.push(`/quiz/${category.id}`);
       }}
     >
-      <span className="text-base font-semibold">{category.label}</span>
+      <span className="font-semibold">{category.label}</span>
     </motion.button>
   );
 };

@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="min-h-full w-full flex flex-col select-none overflow-hidden">
+      <body className="min-h-full w-full flex flex-col select-none overflow-y-auto overflow-x-hidden">
         <RedirectToHome />
         {children}
       </body>

@@ -2,7 +2,7 @@ import { test, expect, vi, beforeEach, afterEach } from "vitest";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { SpinningWheel } from "@/components/quiz/SpinningWheel";
-import { getWheelSlices } from "@/lib/getWheelSlices";
+import { getWheelSlices } from "@/utils/getWheelSlices";
 import { useRouter } from "next/navigation";
 
 /* - Mockando o router do Next pra verificar a navegação sem precisar de um app real - */

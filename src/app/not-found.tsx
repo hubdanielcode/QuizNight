@@ -8,7 +8,7 @@ const NotFound = () => {
 
         <div className="absolute w-72 h-72 rounded-full bg-[radial-gradient(circle,rgba(232,185,35,0.2)_0%,rgba(64,118,195,0.12)_45%,transparent_75%)] blur-2xl pointer-events-none" />
 
-        <div className="relative flex flex-col items-center px-4 py-2 w-100 h-60 bg-white/20 border border-white/10 rounded-xl shadow-md shadow-black">
+        <div className="relative flex flex-col items-center px-4 w-full max-w-sm py-6 bg-white/20 border border-white/10 rounded-xl shadow-md shadow-black">
           <h1 className="text-6xl sm:text-7xl font-black text-[#E8B923]">
             <span>404</span>
           </h1>

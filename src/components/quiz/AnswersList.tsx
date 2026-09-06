@@ -32,25 +32,25 @@ const AnswersList = ({ possibleAnswers, submitAnswerResult, onSelectAnswer }: An
   };
 
   return (
-    <ul className="grid grid-cols-2 w-full gap-8 mx-auto">
+    <ul className="grid grid-cols-2 w-full gap-3 sm:gap-6 md:gap-8 mx-auto">
       {possibleAnswers.map((answer, index) => (
         <li
           className="min-w-0"
           key={index}
         >
           <motion.button
-            className={`flex items-center justify-center gap-2 w-full font-semibold transition-colors duration-300 ${handleGetAnswerColor(answer)} border rounded-xl px-4 py-2 ${chosenAnswer === null ? "cursor-pointer" : ""}`}
+            className={`flex items-center justify-center gap-2 w-full text-sm sm:text-base font-semibold transition-colors duration-300 ${handleGetAnswerColor(answer)} border rounded-xl px-4 py-2 ${chosenAnswer === null ? "cursor-pointer" : ""}`}
             whileHover={chosenAnswer === null ? { scale: 1.05 } : {}}
             whileTap={chosenAnswer === null ? { scale: 0.95 } : {}}
             onClick={() => handleSelectAnswer(answer)}
             disabled={chosenAnswer !== null}
           >
             {submitAnswerResult !== null && answer === submitAnswerResult.rightAnswer && (
-              <Check className="w-4 h-4" />
+              <Check className="w-4 h-4 shrink-0" />
             )}
             {submitAnswerResult !== null &&
               answer === chosenAnswer &&
-              answer !== submitAnswerResult.rightAnswer && <X className="w-4 h-4" />}
+              answer !== submitAnswerResult.rightAnswer && <X className="w-4 h-4 shrink-0" />}
             <span className="line-clamp-2 min-w-0">{answer}</span>
           </motion.button>
         </li>

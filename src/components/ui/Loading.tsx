@@ -21,7 +21,7 @@ const Loading = () => {
       <AnimatePresence>
         {isLoading && (
           <>
-            <div className="flex items-center justify-center text-white text-4xl font-bold mr-1">
+            <div className="flex items-center justify-center text-white text-2xl sm:text-4xl font-bold mr-1">
               <span>Carregando</span>
 
               <motion.div>

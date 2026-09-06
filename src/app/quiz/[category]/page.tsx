@@ -28,11 +28,10 @@ const QuestionPage = async ({ params }: { params: Promise<{ category: string }> 
 
   return (
     <div className="flex flex-col min-h-screen bg-[radial-gradient(circle_at_75%_30%,#2E1F5E_0%,#1A1235_45%,#0D0818_100%),linear-gradient(135deg,rgba(64,118,195,0.08)_0%,transparent_50%)] bg-blend-screen">
-      <div className="w-full mx-auto pt-18">
+      <div className="w-full mx-auto pt-18 px-6">
         <QuizGame
           category={category}
           initialScore={initialScore}
-          
         />
       </div>
     </div>

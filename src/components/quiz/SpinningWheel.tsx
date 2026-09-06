@@ -1,6 +1,6 @@
 "use client";
 
-import { getWheelSlices } from "@/lib/getWheelSlices";
+import { getWheelSlices } from "@/utils/getWheelSlices";
 import { Crown, Sparkles, Triangle } from "lucide-react";
 import { Fragment, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
@@ -62,7 +62,7 @@ const SpinningWheel = ({ showButton }: { showButton: boolean }) => {
 
       <div className="relative flex h-56 w-56 sm:h-72 sm:w-72 md:h-96 md:w-96 border rounded-full">
         <svg
-          className="transition-transform duration-7500 ease-out"
+          className="transition-transform duration-7500 ease-out w-full h-full"
           viewBox="0 0 100 100"
           ref={wheelRef}
         >

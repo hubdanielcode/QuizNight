@@ -28,7 +28,7 @@ const TimeBar = ({ onTimeIsUp, isAnswered }: TimeBarProps) => {
   }, [animation, isAnswered]);
 
   return (
-    <div className="flex flex-col min-w-3xl mx-auto pt-18">
+    <div className="flex flex-col w-full mx-auto">
       <div className="w-full h-3 bg-black/60 rounded-full overflow-hidden">
         <motion.div
           className="h-full rounded-full"

@@ -7,11 +7,13 @@ import { RedirectToHome } from "./RedirectToHome";
 const BonusCategoryModal = () => {
   return (
     <>
-      <div className="flex flex-col items-center justify-center min-h-screen bg-[radial-gradient(circle_at_75%_30%,#2E1F5E_0%,#1A1235_45%,#0D0818_100%),linear-gradient(135deg,rgba(64,118,195,0.08)_0%,transparent_50%)] bg-blend-screen">
-        <div className="flex flex-col items-center justify-center bg-white/20 border border-white/30 rounded-xl">
-          <span className="pt-3 text-2xl font-semibold text-white">Escolha a Categoria</span>
+      <div className="flex flex-col items-center justify-center min-h-screen px-4 bg-[radial-gradient(circle_at_75%_30%,#2E1F5E_0%,#1A1235_45%,#0D0818_100%),linear-gradient(135deg,rgba(64,118,195,0.08)_0%,transparent_50%)] bg-blend-screen">
+        <div className="flex flex-col items-center justify-center w-full max-w-sm bg-white/20 border border-white/30 rounded-xl">
+          <span className="pt-3 px-4 text-xl sm:text-2xl font-semibold text-white text-center">
+            Escolha a Categoria
+          </span>
 
-          <ul className="flex flex-col items-center justify-center gap-y-2 text-xl w-70 m-5">
+          <ul className="flex flex-col items-center justify-center gap-y-2 sm:text-xl w-full px-4 py-5">
             {categories
               .map((category) => (
                 <li

@@ -95,7 +95,7 @@ const Home = () => {
               <div className="relative flex items-center justify-center md:flex-1 my-8 md:mt-0">
                 {/* - Glow atrás da roleta - */}
 
-                <div className="absolute w-72 h-72 sm:w-80 sm:h-80 rounded-full bg-[radial-gradient(circle,rgba(232,185,35,0.25)_0%,rgba(64,118,195,0.15)_45%,transparent_75%)] blur-2xl pointer-events-none" />
+                <div className="absolute w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full bg-[radial-gradient(circle,rgba(232,185,35,0.25)_0%,rgba(64,118,195,0.15)_45%,transparent_75%)] blur-2xl pointer-events-none" />
 
                 <div className="relative drop-shadow-[0_8px_30px_rgba(0,0,0,0.45)]">
                   <SpinningWheel showButton={false} />

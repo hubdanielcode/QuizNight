@@ -123,7 +123,7 @@ const QuizGame = ({ category, initialScore = 0 }: QuizGameProps) => {
               {question.questionCategory}
             </span>
 
-            <span className="text-xl text-white font-semibold w-full text-center">
+            <span className="text-lg sm:text-xl text-white font-semibold w-full text-center">
               {question.title}{" "}
             </span>
           </div>
@@ -135,7 +135,7 @@ const QuizGame = ({ category, initialScore = 0 }: QuizGameProps) => {
               {question.questionCategory}
             </span>
 
-            <span className="text-lg text-white font-semibold w-full text-center">
+            <span className="sm:text-lg text-white font-semibold w-full text-center">
               {question.title}{" "}
             </span>
           </div>
@@ -157,7 +157,7 @@ const QuizGame = ({ category, initialScore = 0 }: QuizGameProps) => {
               />
             )}
 
-            <span className="text-lg text-white font-semibold w-full text-center">
+            <span className="sm:text-lg text-white font-semibold w-full text-center">
               {question.title}{" "}
             </span>
           </div>

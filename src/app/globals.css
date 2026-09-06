@@ -9,5 +9,7 @@
 }
 
 @custom-variant sm {
-  @media screen (min-width: 640px) AND (max-width: 1023px) AND (orientation: landscape);
+  @media screen AND (min-width: 640px) AND (max-width: 1023px) AND (orientation: landscape) {
+    @slot;
+  }
 }

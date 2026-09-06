@@ -1,5 +1,5 @@
 import { test, expect } from "vitest";
-import { getWheelSlices } from "@/lib/getWheelSlices";
+import { getWheelSlices } from "@/utils/getWheelSlices";
 import { categories } from "@/types/categories";
 
 /* - Testando se o número de fatias corresponde ao número de categorias - */

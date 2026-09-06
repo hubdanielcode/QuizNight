@@ -15,7 +15,7 @@ const Cards = ({ className, cards }: CardsProps) => {
           return (
             <li
               key={card.id}
-              className={`flex items-center gap-3 w-2xl px-5 sm:px-4 py-3 sm:py-3 bg-white/20 hover:bg-white/30 border border-white/10 backdrop-blur-sm rounded-xl transition-colors ${className ?? ""}`}
+              className={`flex items-center gap-3 w-full px-5 sm:px-4 py-3 sm:py-3 bg-white/20 hover:bg-white/30 border border-white/10 backdrop-blur-sm rounded-xl transition-colors ${className ?? ""}`}
             >
               <span
                 className={`flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-lg shrink-0 ${card.backgroundColor}`}
